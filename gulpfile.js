@@ -39,11 +39,11 @@ function bundleJS(entryFile, outputFileName, isProduction) {
         .pipe(source(outputFileName))
         .pipe(buffer());
 
-    if (isProduction) {
-        stream = stream
-            .pipe(uglify())
-            .pipe(rename({ extname: '.min.js' }));
-    }
+    // if (isProduction) {
+    //     stream = stream
+    //         .pipe(uglify())
+    //         .pipe(rename({ extname: '.min.js' }));
+    // }
 
     return stream.pipe(dest('dist/js'));
 }
