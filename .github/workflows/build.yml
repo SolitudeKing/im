@@ -3,9 +3,11 @@ name: Build Project
 # 触发条件
 on:
   push:
-    branches: [ main, master ]
+    branches: [ master ]
+    paths-ignore:  # 推送 dist 目录变更时，不触发 Workflow
+      - 'dist/**'
   pull_request:
-    branches: [ main, master ]
+    branches: [ master ]
   workflow_dispatch:  # 允许手动触发
 
 # 环境变量
@@ -61,14 +63,16 @@ jobs:
         name: dist-files
         path: dist/
         retention-days: 7
+
     
-    # 2、部署到 GitHub Pages
-    # - name: Deploy to GitHub Pages
-    #   uses: JamesIves/github-pages-deploy-action@v4
-    #   with:
-    #     token: ${{ secrets.GH_PAGES_TOKEN }}
-    #     branch: master
-    #     folder: dist
-    #     commit-message: 'Deploy to GitHub Pages: ${{ github.sha }}'
+    # 部署到 GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        token: ${{ secrets.GH_PAGES_TOKEN }}
+        branch: gh-pages
+        folder: dist
+        clean: true
+        commit-message: 'Deploy to GitHub Pages: ${{ github.sha }}'
         
 
