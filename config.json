@@ -1,0 +1,13 @@
+{
+  "svgIcon": {
+    "iconPath": "assets/icons/",
+    "iconPrefix": "icon-",
+    "iconClass": "svg-icon",
+    "autoInit": true,
+    "cacheEnabled": true
+  },
+  "project": {
+    "name": "home-page",
+    "version": "1.0.0"
+  }
+}
