@@ -66,9 +66,9 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        access_token: ${{ secrets.ACCESS_TOKEN }}
+        token: ${{ secrets.GH_PAGES_TOKEN }}
         branch: master
         folder: dist
-        commit-message: 'Deploy to GitHub Pages'
+        commit-message: 'Deploy to GitHub Pages: ${{ github.sha }}'
         
 
