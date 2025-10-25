@@ -61,3 +61,14 @@ jobs:
         name: dist-files
         path: dist/
         retention-days: 7
+    
+    # 2、部署到 GitHub Pages
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        access_token: ${{ secrets.ACCESS_TOKEN }}
+        branch: master
+        folder: dist
+        commit-message: 'Deploy to GitHub Pages'
+        
+
