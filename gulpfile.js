@@ -61,7 +61,9 @@ function createJSBundles(isProduction = false) {
 
         console.log(`Creating bundle for ${file} -> ${outputFileName}`);
 
-        return bundleJS(file, outputFileName, isProduction);
+        return function () {
+            return bundleJS(file, outputFileName, isProduction);
+        };
     });
 
     return parallel(...tasks);
