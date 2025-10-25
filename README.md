@@ -1,6 +1,6 @@
 # 个人主页项目
 
-![Project Screenshot](https://via.placeholder.com/1200x600?text=Personal+Homepage+Screenshot)
+
 
 ## 🚀 项目简介
 
