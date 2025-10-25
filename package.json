@@ -6,8 +6,15 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build",
+    "start": "gulp",
+    "serve": "npx serve dist",
+    "preview": "npx serve dist",
+    "clean": "gulp clean",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write src/**/*.{js,scss,html}"
+    "format": "prettier --write src/**/*.{js,scss,html}",
+    "format:check": "prettier --check src/**/*.{js,scss,html}",
+    "lint": "echo \"Linting not configured\" && exit 0",
+    "deploy": "pnpm build && echo \"Build completed, ready for deployment\""
   },
   "keywords": [],
   "author": "SolitudeKing",
