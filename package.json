@@ -1,0 +1,44 @@
+{
+  "name": "home-page",
+  "version": "1.0.0",
+  "description": "一个基于 Node.js, pnpm, Gulp 的纯前端个人主页项目。",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write src/**/*.{js,scss,html}"
+  },
+  "keywords": [],
+  "author": "SolitudeKing",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "@babel/preset-env": "^7.28.3",
+    "babelify": "^10.0.0",
+    "browser-sync": "^3.0.4",
+    "browserify": "^17.0.1",
+    "del": "^8.0.1",
+    "gulp": "^5.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-rename": "^2.1.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-tap": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
+    "prettier": "^3.6.2",
+    "sass": "^1.93.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "gulp-header": "^2.0.9",
+    "jquery": "^3.7.1"
+  },
+  "packageManager": "pnpm@10.15.0"
+}

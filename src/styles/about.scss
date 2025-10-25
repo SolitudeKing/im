@@ -1,0 +1,23 @@
+@use "common/variables" as _v;
+@use "base"; // 引入 _base.scss，命名空间为 base
+
+/* 关于我 */
+.about-me {
+    padding: 40px 0;
+    background: #fff;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        max-width: 800px;
+        margin: auto;
+        padding: 0 20px;
+
+        p {
+            margin-bottom: 15px;
+        }
+    }
+}
