@@ -80,7 +80,7 @@ HomePage/
 ## ⚙️ 安装与运行
 
 ### 环境要求
-- Node.js >= 16.0.0
+- Node.js >= 18.0.0
 - pnpm >= 8.0.0
 
 ### 快速开始
@@ -99,17 +99,42 @@ HomePage/
 3. **启动开发服务器**
    ```bash
    pnpm dev
-   # 或
-   pnpm gulp
    ```
    访问 `http://localhost:5431` 查看项目
 
 4. **构建生产版本**
    ```bash
    pnpm build
-   # 或
-   pnpm gulp build
    ```
+
+5. **预览构建结果**
+   ```bash
+   pnpm serve
+   ```
+
+## 🔧 构建和部署
+
+### GitHub Actions 构建
+项目使用 GitHub Actions 进行自动化构建：
+- 推送到 `main` 分支时自动触发构建
+- 构建产物自动上传到 GitHub Actions Artifacts
+- 支持手动触发构建
+
+### 构建产物
+构建完成后，`dist/` 目录包含：
+- HTML 文件（index.html, about.html）
+- CSS 文件（压缩后的样式）
+- JavaScript 文件（打包后的脚本）
+- 静态资源（图片、图标等）
+
+### 部署方式
+构建产物可以部署到任何静态网站托管服务：
+- GitHub Pages
+- Vercel
+- Netlify
+- 自建服务器
+
+详细部署说明请参考 [DEPLOYMENT.md](DEPLOYMENT.md)
 
 ## 🎯 核心功能
 
